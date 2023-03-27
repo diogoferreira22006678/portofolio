@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+
+#motivationalText {
+    color: #000000;
+    text-align: center;
+    /* margin top to get at the center of the screen */
+    margin-top: 20%;
+    /* some margin left and right */
+    margin-left: 10%;
+    margin-right: 10%;
+}
