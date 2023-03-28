@@ -1,14 +1,45 @@
 body {
     margin: 0px;
     font-family: 'segoe ui';
+    /* Make Background Image the file in the paste images folder */
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #motivationalText {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     /* margin top to get at the center of the screen */
     margin-top: 20%;
     /* some margin left and right */
     margin-left: 10%;
     margin-right: 10%;
+    /* shadow */
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#aboutMe {
+    /* make it go down a bit */
+    margin-top: 50%;
+    /* some margin left and right */
+    margin-left: 10%;
+    margin-right: 10%;
+    /* shadow */
+    text-shadow: 2px 2px 4px #000000;
+    /* make it white */
+    color: #ffffff;
+    /* make it centered */
+    text-align: center;
+    /* make it bigger */
+    font-size: 20px;
+    /* margin bottom to get at the center of the screen */
+    margin-bottom: 20%;
+    /* make a semi-transparent background with a border radius */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    /* padding */
+    padding: 10px;
+    
 }

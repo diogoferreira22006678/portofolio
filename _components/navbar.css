@@ -6,12 +6,16 @@
     margin: 0px;
     font-family: 'segoe ui';
   }
-  
+
   .nav {
     height: 50px;
     width: 100%;
-    background-color: #4d4d4d;
+    background-color: transparent;
     position: relative;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    position: fixed;
   }
   
   .nav > .nav-header {
@@ -41,13 +45,18 @@
     text-decoration: none;
     color: #efefef;
   }
-  
-  .nav > .nav-links > a:hover {
+ 
+  .nav > .nav-links > .link:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
   
   .nav > #nav-check {
     display: none;
+  }
+
+  .nav >.nav-links > a > .vl:hover {
+    cursor: default; 
+    background: transparent !important;
   }
   
   @media (max-width:600px) {
