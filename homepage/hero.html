@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="../navbar.css">
     <title>HomePage</title>
 </head>
 <body style="margin: 0px;">
     <!-- Include NavBar using iframe -->
-    <iframe src="../_components/navbar.html" style="width: 100%; height: 100px; border: none;"></iframe>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Diogo Ferreira
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>    
+        <div class="nav-links">
+          <a class="link" href="/homepage/hero.html" target="_top">Home</a>
+          <a class="vl">|</a>
+          <a class="link" href="/playground/playground.html" target="_top" >Playground</a>
+        </div>
+      </div>
     <h3 id="motivationalText">
         "You, me, or nobody is gonna hit as hard as life. But it ain’t about how hard you hit. It’s about how hard you can get hit and keep moving forward; how much you can take and keep moving forward. That’s how winning is done!"
     </h3>
