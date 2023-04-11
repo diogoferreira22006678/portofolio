@@ -30,9 +30,63 @@
             <i class="fa-solid fa-moon"></i>
           </a>
           <a class="vl">|</a>
+          <a class="vl" id="date"></a>
+          <a class="vl">|</a>
           <a class="link" href="/homepage/hero.html" target="_top">Home</a>
           <a class="vl">|</a>
           <a class="link" href="/playground/playground.html" target="_top" >Playground</a>
+        </div>
+      </div>
+
+      <!-- The main content of the page, container for the cards -->
+      <div class="container" style="margin-top: 10%; margin-bottom: 5%; margin-left: 7%; margin-right: 7%;">
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Calculadora</h2>
+          </div>
+          <div class="card-body">
+              <input type="text" id="expression" placeholder="Insira a expressão aritmética">
+              <button id="calculate">Calcular</button>
+              <button id="clear">Limpar</button>
+            <div>
+              <p id="result">Resultado: </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Fotografia</h2>
+          </div>
+          <div class="card-body">
+              <img src="https://picsum.photos/id/237/300/200" alt="Imagem aleatória" id="randomImage">
+              <input type="text" id="inspired" placeholder="Escreva uma frase inspirada na imagem">            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h2>Nome</h2>
+          </div>
+          <div class="card-body">
+              Bem-vindo, <span class="name"></span>!
+            </div>
+            <div>
+              <p>Aqui está o seu nome novamente: <span class="name"></span></p>
+            </div>
+            <div>
+              <footer>
+                Desenvolvido por <span class="name"></span>
+              </footer>            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h2>Mouse Event</h2>
+          </div>
+          <div class="card-body">
+            <div onmouseover="changeBackground()" onmouseout="resetBackground()">Hover me</div>
+          </div>
         </div>
       </div>
 </body>
@@ -66,6 +120,60 @@
           document.getElementsByClassName("nav-title")[0].style.color = "white";
     }
   });
+
+  // Calculator 
+  const expressionInput = document.getElementById("expression");
+  const calculateButton = document.getElementById("calculate");
+  const clearButton = document.getElementById("clear");
+  const resultElement = document.getElementById("result");
+
+  calculateButton.addEventListener("click", () => {
+    const expression = expressionInput.value;
+    if (expression) {
+      const result = eval(expression);
+      resultElement.textContent = `Resultado: ${result}`;
+    }
+  });
+
+  clearButton.addEventListener("click", () => {
+    expressionInput.value = "";
+    resultElement.textContent = "Resultado: ";
+  });
+
+  // Inspired text
+  const inspiredInput = document.getElementById("inspired");
+
+  inspiredInput.addEventListener("change", () => {
+    const inspiredText = inspiredInput.value;
+    const image = inspiredInput.previousElementSibling;
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    overlay.textContent = inspiredText;
+    image.parentNode.insertBefore(overlay, image.nextSibling);
+  });
+
+  // Name
+  const nameSpans = document.querySelectorAll(".name");
+  const name = prompt("Qual é o seu nome?");
+  for (const nameSpan of nameSpans) {
+    nameSpan.textContent = name;
+  }
+
+  const dateElement = document.getElementById("date");
+  const now = new Date();
+  const options = { month: "long", day: "numeric", year: "numeric" };
+  const formattedDate = now.toLocaleDateString("pt-PT", options);
+  dateElement.textContent = formattedDate;
+
+  // Mouse Over Event 
+  function changeBackground() {
+  document.querySelector("div").style.backgroundColor = "yellow";
+  }
+
+  function resetBackground() {
+    document.querySelector("div").style.backgroundColor = "transparent";
+  }
+
 </script>
 <script src="https://kit.fontawesome.com/0bcce8cda6.js" crossorigin="anonymous"></script>
 <script src="../scripts.js"></script>
