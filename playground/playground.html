@@ -26,25 +26,44 @@
           </label>
         </div>    
         <div class="nav-links">
+          <a class="nav-icon" id="dark-mode-icon" style="color :white;">
+            <i class="fa-solid fa-moon"></i>
+          </a>
+          <a class="vl">|</a>
           <a class="link" href="/homepage/hero.html" target="_top">Home</a>
           <a class="vl">|</a>
           <a class="link" href="/playground/playground.html" target="_top" >Playground</a>
-          <!-- Add a div in the navbar to display the dark mode and light mode icons in white -->
-
-            <a class="nav-icon" id="dark-mode-icon" style="color :white;">
-              <i class="fa-solid fa-moon"></i>
-            </a>
         </div>
+      </div>
 </body>
 <script>
   // Add a event listener to the dark mode icon and light mode icon to change the theme of the page when clicked and alternate sun and moon icons in the same div
   document.getElementById("dark-mode-icon").addEventListener("click", function() {
     document.body.classList.toggle("dark-theme");
     if (document.body.classList.contains("dark-theme")) {
-      document.getElementById("dark-mode-icon").innerHTML = '<i class="fa-solid fa-sun" style="color:white"></i>';
-      
+          document.getElementById("dark-mode-icon").innerHTML = '<i class="fa-solid fa-sun" style="color:black"></i>';
+          // Alter the color of the text in the navbar to black with a loop
+          var navLinks = document.getElementsByClassName("link");
+          for (var i = 0; i < navLinks.length; i++) {
+            navLinks[i].style.color = "black";
+          }
+          var navVl = document.getElementsByClassName("vl");
+          for (var i = 0; i < navVl.length; i++) {
+            navVl[i].style.color = "black";
+          }
+          document.getElementsByClassName("nav-title")[0].style.color = "black";
     } else {
-      document.getElementById("dark-mode-icon").innerHTML = '<i class="fa-solid fa-moon" style="color:white"></i>';
+          document.getElementById("dark-mode-icon").innerHTML = '<i class="fa-solid fa-moon" style="color:white"></i>';
+          // Alter the color of the text in the navbar to white with a loop
+          var navLinks = document.getElementsByClassName("link");
+          for (var i = 0; i < navLinks.length; i++) {
+            navLinks[i].style.color = "white";
+          }
+          var navVl = document.getElementsByClassName("vl");
+          for (var i = 0; i < navVl.length; i++) {
+            navVl[i].style.color = "white";
+          }
+          document.getElementsByClassName("nav-title")[0].style.color = "white";
     }
   });
 </script>

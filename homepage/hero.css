@@ -3,9 +3,9 @@ body {
     font-family: 'segoe ui';
     /* Make Background Image the file in the paste images folder */
     background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
 }
 
 #motivationalText {
@@ -20,26 +20,52 @@ body {
     text-shadow: 2px 2px 4px #000000;
 }
 
-#aboutMe {
-    /* make it go down a bit */
-    margin-top: 50%;
-    /* some margin left and right */
-    margin-left: 10%;
-    margin-right: 10%;
-    /* shadow */
-    text-shadow: 2px 2px 4px #000000;
-    /* make it white */
-    color: #ffffff;
-    /* make it centered */
-    text-align: center;
-    /* make it bigger */
-    font-size: 20px;
-    /* margin bottom to get at the center of the screen */
+.container {
+    margin-top: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10%;
+    height: 100vh;
     margin-bottom: 20%;
-    /* make a semi-transparent background with a border radius */
-    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  #aboutMe {
+    margin: auto;
+    text-align: left;
+    color: #060606;
+    font-size: 20px;
+    padding: 20px;
+    /* Make a semi transparent background */
+    background-color: rgba(54, 54, 54, 0.7);
+    /* Make the background rounded */
     border-radius: 10px;
-    /* padding */
-    padding: 10px;
-    
-}
+    /* Make the background shadowed */
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* h1,h2 and p are all text white */
+    h1,h2,p,li {
+        color: #fff;
+    }
+
+
+    .aboutMe h2 {
+        margin-top: 0;
+        color: #fff;
+    }
+  
+  .aboutMe p {
+    margin-bottom: 0;
+  }
+  
+  .photo {
+    width: 30%;
+    margin-right: 10%;
+  }
+  
+  .photo img {
+    display: block;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+  }
