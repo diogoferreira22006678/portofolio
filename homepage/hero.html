@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="../navbar.css">
+    <script src="https://kit.fontawesome.com/0bcce8cda6.js" crossorigin="anonymous"></script>
     <title>HomePage</title>
 </head>
 <body style="margin: 0px;">
     <!-- Include NavBar using iframe -->
-    <div class="nav">
+    <div class="nav" id="navbar">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
           <div class="nav-title">
@@ -27,6 +28,8 @@
         <div class="nav-links">
           <a class="link" href="/homepage/hero.html" target="_top">Home</a>
           <a class="vl">|</a>
+          <a class="link" href="#aboutMe">About Me</a>
+          <a class="vl">|</a>
           <a class="link" href="/playground/playground.html" target="_top" >Playground</a>
         </div>
       </div>
@@ -35,13 +38,16 @@
         "You, me, or nobody is gonna hit as hard as life. But it ain’t about how hard you hit. It’s about how hard you can get hit and keep moving forward; how much you can take and keep moving forward. That’s how winning is done!"
     </h3>
     <div class="container">
+    <i class="fa-solid fa-arrow-down"></i>
+    </div>
+    <div class="container">
       <article id="aboutMe">
         <h1 style="text-align: center;font-size:xx-large">About Me</h1>
-        <div style="display: flex; align-items: center;">
+        <div id="headerAboutMe">
           <div class="photo" style="margin-left: 60px;">
             <img src="../images/me.jpg" alt="My photo">
           </div>
-          <p style="margin-right: 60px;">
+          <p id="resume" style="margin-right: 60px;">
               I'm a 23-year-old student from Portugal, currently pursuing a degree in web development. I chose this course because I'm passionate about technology and its potential to make a positive impact on people's lives.
           </p>
         </div>

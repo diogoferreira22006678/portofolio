@@ -20,9 +20,17 @@ body {
     text-shadow: 2px 2px 4px #000000;
 }
 
+#resume{
+  /* Make a perforated line border */
+  border: 1px dashed #fff;
+  border-radius: 5px;
+  border-radius: 10px;
+  /* Give it some padding */
+  padding: 10px;
+
+}
 .container {
     margin-top: 40%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10%;
@@ -31,6 +39,7 @@ body {
   }
   
   #aboutMe {
+    /* Center the div */
     margin: auto;
     text-align: left;
     color: #060606;
@@ -43,7 +52,18 @@ body {
     /* Make the background shadowed */
     box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
   }
-  
+  #headerAboutMe {
+    display: flex; 
+    align-items: center;
+  }
+  /* If headerAboutMe is less then 1000px wide, make the text go below the image */
+  @media screen and (max-width: 1000px) {
+    #headerAboutMe {
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+    }
+  }
   /* h1,h2 and p are all text white */
     h1,h2,p,li {
         color: #fff;
